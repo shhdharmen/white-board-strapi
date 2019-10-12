@@ -1,0 +1,41 @@
+{
+  "connection": "default",
+  "collectionName": "note",
+  "info": {
+    "name": "note",
+    "description": "Note"
+  },
+  "options": {
+    "timestamps": [
+      "createdAt",
+      "updatedAt"
+    ]
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "required": true,
+      "type": "richtext"
+    },
+    "tags": {
+      "collection": "tag",
+      "via": "notes"
+    },
+    "category": {
+      "model": "category",
+      "via": "notes"
+    },
+    "archive": {
+      "type": "boolean"
+    },
+    "delete": {
+      "type": "boolean"
+    },
+    "color": {
+      "model": "color",
+      "via": "notes"
+    }
+  }
+}
