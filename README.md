@@ -1,3 +1,3 @@
-# Strapi application
+# white-board-strapi
 
-A quick description of your strapi application
+A Strapi application for [WhiteBoard](https://github.com/shhdharmen/WhiteBoard).
