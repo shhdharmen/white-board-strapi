@@ -5,7 +5,7 @@
       "path": "/categories",
       "handler": "Category.find",
       "config": {
-        "policies": []
+        "policies": ["global.isUser"]
       }
     },
     {
@@ -13,7 +13,7 @@
       "path": "/categories/count",
       "handler": "Category.count",
       "config": {
-        "policies": []
+        "policies": ["global.isUser"]
       }
     },
     {
@@ -21,7 +21,7 @@
       "path": "/categories/:id",
       "handler": "Category.findOne",
       "config": {
-        "policies": []
+        "policies": ["global.isUser"]
       }
     },
     {
@@ -29,7 +29,7 @@
       "path": "/categories",
       "handler": "Category.create",
       "config": {
-        "policies": []
+        "policies": ["global.setUser"]
       }
     },
     {
@@ -37,7 +37,7 @@
       "path": "/categories/:id",
       "handler": "Category.update",
       "config": {
-        "policies": []
+        "policies": ["global.isUser"]
       }
     },
     {
@@ -45,7 +45,7 @@
       "path": "/categories/:id",
       "handler": "Category.delete",
       "config": {
-        "policies": []
+        "policies": ["global.isUser"]
       }
     }
   ]

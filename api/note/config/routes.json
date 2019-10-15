@@ -5,7 +5,7 @@
       "path": "/notes",
       "handler": "Note.find",
       "config": {
-        "policies": []
+        "policies": ["global.isUser"]
       }
     },
     {
@@ -13,7 +13,7 @@
       "path": "/notes/count",
       "handler": "Note.count",
       "config": {
-        "policies": []
+        "policies": ["global.isUser"]
       }
     },
     {
@@ -21,7 +21,7 @@
       "path": "/notes/:id",
       "handler": "Note.findOne",
       "config": {
-        "policies": []
+        "policies": ["global.isUser"]
       }
     },
     {
@@ -29,7 +29,7 @@
       "path": "/notes",
       "handler": "Note.create",
       "config": {
-        "policies": []
+        "policies": ["global.setUser"]
       }
     },
     {
@@ -37,7 +37,7 @@
       "path": "/notes/:id",
       "handler": "Note.update",
       "config": {
-        "policies": []
+        "policies": ["global.isUser"]
       }
     },
     {
@@ -45,7 +45,7 @@
       "path": "/notes/:id",
       "handler": "Note.delete",
       "config": {
-        "policies": []
+        "policies": ["global.isUser"]
       }
     }
   ]

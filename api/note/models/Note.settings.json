@@ -19,14 +19,6 @@
       "required": true,
       "type": "richtext"
     },
-    "tags": {
-      "collection": "tag",
-      "via": "notes"
-    },
-    "category": {
-      "model": "category",
-      "via": "notes"
-    },
     "archive": {
       "type": "boolean"
     },
@@ -34,8 +26,21 @@
       "type": "boolean"
     },
     "color": {
-      "model": "color",
+      "model": "color"
+    },
+    "tags": {
+      "collection": "tag",
+      "via": "notes",
+      "dominant": true
+    },
+    "category": {
+      "model": "category",
       "via": "notes"
+    },
+    "user": {
+      "model": "user",
+      "via": "notes",
+      "plugin": "users-permissions"
     }
   }
 }

@@ -1,18 +1,26 @@
 {
   "connection": "default",
-  "collectionName": "",
+  "collectionName": "category",
   "info": {
     "name": "category",
     "description": ""
   },
   "options": {
-    "timestamps": true
+    "timestamps": [
+      "createdAt",
+      "updatedAt"
+    ]
   },
   "attributes": {
     "name": {
       "unique": true,
       "required": true,
       "type": "string"
+    },
+    "user": {
+      "model": "user",
+      "via": "categories",
+      "plugin": "users-permissions"
     },
     "notes": {
       "collection": "note",
