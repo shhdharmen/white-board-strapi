@@ -12,13 +12,13 @@ module.exports = async (ctx, next) => {
 
   await next();
   const responseBody = ctx.response.body;
-  const user = responseBody.user && responseBody.user.id;
+  const user = responseBody.user;
 
   if (user) {
     if (user !== id && role !== "administrator") {
       return ctx.unauthorized("You are not allowed to perform this action.");
     }
   } else if (role !== "administrator") {
-    ctx.send(responseBody.filter(item => item.user.id === id));
+    ctx.send(responseBody.filter(item => item.user === id));
   }
 };

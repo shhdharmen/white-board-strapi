@@ -573,7 +573,9 @@
               "required": [
                 "id",
                 "username",
-                "email"
+                "email",
+                "firstname",
+                "lastname"
               ],
               "properties": {
                 "id": {
@@ -603,23 +605,14 @@
                 "role": {
                   "type": "string"
                 },
-                "tags": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
+                "Image": {
+                  "type": "string"
                 },
-                "categories": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
+                "firstname": {
+                  "type": "string"
                 },
-                "notes": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
+                "lastname": {
+                  "type": "string"
                 }
               }
             }

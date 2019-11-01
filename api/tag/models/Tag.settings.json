@@ -13,18 +13,12 @@
   },
   "attributes": {
     "name": {
-      "unique": true,
       "required": true,
       "type": "string"
     },
     "user": {
-      "model": "user",
-      "via": "tags",
-      "plugin": "users-permissions"
-    },
-    "notes": {
-      "collection": "note",
-      "via": "tags"
+      "required": true,
+      "type": "string"
     }
   }
 }

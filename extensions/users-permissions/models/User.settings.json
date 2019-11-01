@@ -1,6 +1,6 @@
 {
-  "collectionName": "users-permissions_user",
   "connection": "default",
+  "collectionName": "users-permissions_user",
   "info": {
     "name": "user",
     "description": ""
@@ -56,17 +56,18 @@
       "plugin": "users-permissions",
       "configurable": false
     },
-    "tags": {
-      "collection": "tag",
-      "via": "user"
+    "Image": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
     },
-    "categories": {
-      "collection": "category",
-      "via": "user"
+    "firstname": {
+      "required": true,
+      "type": "string"
     },
-    "notes": {
-      "collection": "note",
-      "via": "user"
+    "lastname": {
+      "type": "string",
+      "required": true
     }
   }
 }

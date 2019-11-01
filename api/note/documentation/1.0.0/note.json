@@ -511,7 +511,9 @@
       "Note": {
         "required": [
           "id",
-          "content"
+          "title",
+          "color",
+          "user"
         ],
         "properties": {
           "id": {
@@ -530,131 +532,25 @@
             "type": "boolean"
           },
           "color": {
-            "required": [
-              "id",
-              "name",
-              "rgba_value"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "rgba_value": {
-                "type": "string"
-              }
-            }
-          },
-          "tags": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "name"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "user": {
-                  "type": "string"
-                },
-                "notes": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                }
-              }
-            }
-          },
-          "category": {
-            "required": [
-              "id",
-              "name"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "user": {
-                "type": "string"
-              },
-              "notes": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
+            "type": "string",
+            "default": "#fff"
           },
           "user": {
-            "required": [
-              "id",
-              "username",
-              "email"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "username": {
-                "type": "string"
-              },
-              "email": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "password": {
-                "type": "string"
-              },
-              "resetPasswordToken": {
-                "type": "string"
-              },
-              "confirmed": {
-                "type": "boolean"
-              },
-              "blocked": {
-                "type": "boolean"
-              },
-              "role": {
-                "type": "string"
-              },
-              "tags": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "categories": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "notes": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
+            "type": "string"
+          },
+          "category": {
+            "type": "string"
+          },
+          "tags": {
+            "type": "object"
           }
         }
       },
       "NewNote": {
         "required": [
-          "content"
+          "title",
+          "color",
+          "user"
         ],
         "properties": {
           "title": {
@@ -670,19 +566,17 @@
             "type": "boolean"
           },
           "color": {
-            "type": "string"
+            "type": "string",
+            "default": "#fff"
           },
-          "tags": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
+          "user": {
+            "type": "string"
           },
           "category": {
             "type": "string"
           },
-          "user": {
-            "type": "string"
+          "tags": {
+            "type": "object"
           }
         }
       }

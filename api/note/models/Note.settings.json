@@ -13,10 +13,10 @@
   },
   "attributes": {
     "title": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "content": {
-      "required": true,
       "type": "richtext"
     },
     "archive": {
@@ -26,21 +26,19 @@
       "type": "boolean"
     },
     "color": {
-      "model": "color"
-    },
-    "tags": {
-      "collection": "tag",
-      "via": "notes",
-      "dominant": true
-    },
-    "category": {
-      "model": "category",
-      "via": "notes"
+      "required": true,
+      "type": "string",
+      "default": "#fff"
     },
     "user": {
-      "model": "user",
-      "via": "notes",
-      "plugin": "users-permissions"
+      "required": true,
+      "type": "string"
+    },
+    "category": {
+      "type": "string"
+    },
+    "tags": {
+      "type": "json"
     }
   }
 }

@@ -511,7 +511,8 @@
       "Tag": {
         "required": [
           "id",
-          "name"
+          "name",
+          "user"
         ],
         "properties": {
           "id": {
@@ -521,105 +522,14 @@
             "type": "string"
           },
           "user": {
-            "required": [
-              "id",
-              "username",
-              "email"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "username": {
-                "type": "string"
-              },
-              "email": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "password": {
-                "type": "string"
-              },
-              "resetPasswordToken": {
-                "type": "string"
-              },
-              "confirmed": {
-                "type": "boolean"
-              },
-              "blocked": {
-                "type": "boolean"
-              },
-              "role": {
-                "type": "string"
-              },
-              "tags": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "categories": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "notes": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "notes": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "content"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "title": {
-                  "type": "string"
-                },
-                "content": {
-                  "type": "string"
-                },
-                "archive": {
-                  "type": "boolean"
-                },
-                "delete": {
-                  "type": "boolean"
-                },
-                "color": {
-                  "type": "string"
-                },
-                "tags": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "category": {
-                  "type": "string"
-                },
-                "user": {
-                  "type": "string"
-                }
-              }
-            }
+            "type": "string"
           }
         }
       },
       "NewTag": {
         "required": [
-          "name"
+          "name",
+          "user"
         ],
         "properties": {
           "name": {
@@ -627,12 +537,6 @@
           },
           "user": {
             "type": "string"
-          },
-          "notes": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
           }
         }
       }
